@@ -29,18 +29,31 @@ public class Main {
             System.out.println("Quanto você deseja depositar? \n");
             Scanner valorDeposito = new Scanner(System.in);
             deposito = valorDeposito.nextDouble();
+
+            if (deposito < 0) {
+                System.out.println("Você não pode depositar um valor negativo.");
+                continue;
+            }
+            if (deposito == 0) {
+                System.out.println("Você não pode depositar zero.");
+                continue;
+            }
             saldo += deposito;
             System.out.println("O valor atual na sua conta é de: " + saldo);
+
         } else if (opcao == 2) {
             System.out.println("Quanto você deseja Sacar? \n");
             Scanner valorSaque = new Scanner(System.in);
             saque = valorSaque.nextDouble();
             saldo -= saque;
             System.out.println("O valor atual na sua conta é de: " + saldo);
+
         } else if (opcao == 3) {
             System.out.println("O valor atual na sua conta é de: " + saldo);
+
         } else{
             System.out.println("Opção inválida, tente novamente");
+
         }
 
     }}
