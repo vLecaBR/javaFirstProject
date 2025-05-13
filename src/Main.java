@@ -45,6 +45,19 @@ public class Main {
             System.out.println("Quanto você deseja Sacar? \n");
             Scanner valorSaque = new Scanner(System.in);
             saque = valorSaque.nextDouble();
+
+            if (saque < 0) {
+                System.out.println("Você não pode sacar um valor negativo.");
+                continue;
+            }
+            if (saque > saldo) {
+                System.out.println("Você não pode sacar mais do que o saldo disponível.");
+                continue;
+            }
+            if (saque == 0) {
+                System.out.println("Você não pode sacar zero.");
+                continue;
+            }
             saldo -= saque;
             System.out.println("O valor atual na sua conta é de: " + saldo);
 
