@@ -64,7 +64,9 @@ public class Main {
         } else if (opcao == 3) {
             System.out.println("O valor atual na sua conta é de: " + saldo);
 
-        } else{
+        } else if(opcao == 4){
+            System.out.println("Obrigado por usar nosso sistema, até logo!");
+        }else{
             System.out.println("Opção inválida, tente novamente");
 
         }
