@@ -39,8 +39,8 @@ public class Main {
             System.out.println("O valor atual na sua conta é de: " + saldo);
         } else if (opcao == 3) {
             System.out.println("O valor atual na sua conta é de: " + saldo);
-        } else if (opcao == 4) {
-
+        } else{
+            System.out.println("Opção inválida, tente novamente");
         }
 
     }}
